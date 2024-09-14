@@ -366,9 +366,9 @@ class Solution {
 
 
 
-## BFS和DFS
+## Graph
 
-BFS：广度优先搜索
+### BFS：广度优先搜索
 
 ```java
 // BFS算法实现
@@ -401,7 +401,7 @@ void BFS(int startVertex) {
 
 所有节点被弹出的顺序就是BFS
 
-DFS：深度优先搜索
+### DFS：深度优先搜索
 
 ```java
 // DFS算法实现
@@ -432,6 +432,23 @@ private void DFSUtil(int v, boolean[] visited) {
 如果没有登记过，就对该邻居执行recursion
 
 所有节点被拜访的顺序就是DFS
+
+### 用Adjacent List表示Graph
+
+使用一个 HashMap 来存储邻接表，其中Key是节点，Value是与该节点相邻的节点列表。
+
+```java
+Map<String, Set<String>> adj = new HashMap<>();
+```
+
+添加nodeA和nodeB之间的边
+
+```java
+adj.putIfAbsent(nodeA, new ArrayList<>());
+adj.putIfAbsent(nodeB, new ArrayList<>());
+adj.get(nodeA).add(nodeB);
+adj.get(nodeB).add(nodeA);
+```
 
 ## Java Knowledge
 
