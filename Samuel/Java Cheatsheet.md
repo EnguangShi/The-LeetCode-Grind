@@ -368,6 +368,8 @@ class Solution {
 
 ## Graph
 
+- indegree: 每个节点被几条边指向。如果一个tree中某节点的indegree是1（只有一条边指向它），那么它一定是leaf node
+
 ### BFS：广度优先搜索
 
 ```java
