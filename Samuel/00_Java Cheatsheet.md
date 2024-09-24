@@ -114,6 +114,9 @@ list = new LinkedList<>(); // This is perfectly valid.
 - s.startsWith("a");
 - s.endsWith("z");
 - s.toLowerCase();
+- s.indexOf('#', i): 找到index i后面的第一个字符'#'的位置
+- String.valueOf(i): convert int to String
+- Integer.valueOf(s): convert String to int
 
 ### StringBuilder
 
@@ -121,7 +124,7 @@ list = new LinkedList<>(); // This is perfectly valid.
 
 创建：`StringBuilder sb = new StringBuilder();`
 
-- sb.append("something")
+- sb.append("something"): 这里something可以是int
 - sb.length()
 - sb.charAt(i)
 - sb.setCharAt(i, 'c')
